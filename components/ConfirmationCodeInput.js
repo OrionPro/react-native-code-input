@@ -68,7 +68,6 @@ export default class ConfirmationCodeInput extends Component {
 		containerStyle: ViewPropTypes.style,
 		onFulfill: PropTypes.func,
 		inputComponent: PropTypes.func,
-		keyboardType: any,
 	}
 
 	static defaultProps = {
