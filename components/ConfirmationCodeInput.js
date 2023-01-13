@@ -65,11 +65,10 @@ export default class ConfirmationCodeInput extends Component {
 		activeColor: PropTypes.string,
 		inactiveColor: PropTypes.string,
 		autoFocus: PropTypes.bool,
-		codeInputStyle: TextInput.propTypes.style,
 		containerStyle: ViewPropTypes.style,
 		onFulfill: PropTypes.func,
 		inputComponent: PropTypes.func,
-		keyboardType: TextInput.propTypes.keyboardType,
+		keyboardType: any,
 	}
 
 	static defaultProps = {
@@ -157,7 +156,7 @@ export default class ConfirmationCodeInput extends Component {
 
 	render() {
 		const {
-			codeLength, codeInputStyle, containerStyle,
+			codeLength, containerStyle,
 			inputPosition, autoFocus, size, activeColor,
 		} = this.props
 		const Component = this.props.inputComponent
@@ -170,7 +169,7 @@ export default class ConfirmationCodeInput extends Component {
 					styles.codeInput,
 					initialCodeInputStyle,
 					getBorderTypeStyle(this.state.currentIndex == id, this.props),
-					codeInputStyle,
+					TextInput.style,
 				]}
 				underlineColorAndroid='transparent'
 				selectionColor={activeColor}
