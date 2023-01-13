@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {View, TextInput, StyleSheet, Dimensions, Platform, ViewPropTypes} from 'react-native'
+import {View, TextInput, StyleSheet, Dimensions, Platform} from 'react-native'
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 import _ from 'lodash'
 
 const defaultKeyboardType = Platform.select({
